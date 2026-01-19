@@ -30,3 +30,36 @@ This repo contains the full notebooks, training scripts for Stage-2, and the con
   Consolidated results table (**125 rows**) covering:
   - **120 soundscape runs**: 6 scenarios × {S3, S1+S3, S2+S3, S1+S2+S3} over all stage variants
   - **5 single-clip runs**: clip-level evaluation for sanity checking
+
+## Pretrained Checkpoints (Required)
+
+To run `EchoGuard_Full_Pipeline.ipynb`, download **all checkpoints** from the latest GitHub Release and place them **in the same folder** (no subdirectories).
+
+### Included models
+**Stage 2 (binary danger/safe):**
+- `bcresnet1.pt`  — BC-ResNet (τ = 1)
+- `bcresnet2.pt`  — BC-ResNet (τ = 2)
+- `bcresnet3.pt`  — BC-ResNet (τ = 3)
+- `bcresnet8.pt`  — BC-ResNet (τ = 8)
+
+**Stage 3 (50-class ESC, EfficientAT):**
+- `dymn10_as.pt` — DyMN-10 pretrained on AudioSet, fine-tuned on ESC-50 (fold 1)
+- `mn04_as.pt`  — MobileNet (mn04) pretrained on AudioSet, fine-tuned on ESC-50 (fold 1)
+
+The notebook will load checkpoints by filename depending on the selected
+cascade configuration.
+
+## ESC-50 Dataset Setup
+
+EchoGuard expects the **ESC-50 dataset resampled to 32 kHz**. Follow the instructions in the [PaSST](https://github.com/kkoutini/PaSST/tree/main/esc50) repository to get the ESC50 dataset.
+
+You should end up with a folder `esc50` containing the two folders:
+
+* `meta`: contains `meta.csv`
+* `audio_32k`: contains all .wav files
+
+Then update the path in the notebook:
+
+```python
+ESC50_32K_ROOT = "path/to/esc50"
+```
