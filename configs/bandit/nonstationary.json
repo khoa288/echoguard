@@ -1,0 +1,15 @@
+{
+  "name": "nonstationary",
+  "scenario_order": [
+    "sleep_night",
+    "quiet_home_day",
+    "kitchen_like",
+    "busy_indoor",
+    "outdoor_park",
+    "commute_like"
+  ],
+  "duration_minutes_per_scenario": 10,
+  "seeds": [2026, 2027, 2028],
+  "policy_reset": "per_concatenated_stream",
+  "expose_scenario_to_policy": false
+}

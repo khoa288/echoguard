@@ -1,0 +1,9 @@
+{
+  "portfolios": {
+    "bc_only": ["A0", "A1", "A2", "A3", "A4"],
+    "bc_mn04": ["A0", "A1", "A2", "A3", "A4", "A5", "A7", "A8", "A9", "A10"],
+    "bc_dymn10": ["A0", "A1", "A2", "A3", "A4", "A6", "A11", "A12", "A13", "A14"],
+    "full": ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "A12", "A13", "A14"]
+  },
+  "safety": ["none", "conservative", "risk_shield", "conservative_and_risk_shield"]
+}

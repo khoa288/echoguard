@@ -1,0 +1,15 @@
+{
+  "name": "six_scenarios",
+  "scenarios": [
+    "quiet_home_day",
+    "sleep_night",
+    "busy_indoor",
+    "kitchen_like",
+    "outdoor_park",
+    "commute_like"
+  ],
+  "seeds": [2026, 2027, 2028],
+  "decision_hop_seconds": 0.5,
+  "policy_reset": "per_stream",
+  "expose_scenario_to_policy": false
+}

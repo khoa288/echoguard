@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+dist/
+build/
+*.egg-info/
+
+# Downloaded checkpoints and datasets
+*.pt
+*.pth
+esc50/
+
+# Generated EchoGuard-Bandit artifacts
+bandit_logs/*
+!bandit_logs/.gitkeep
+bandit_results/*
+!bandit_results/.gitkeep
